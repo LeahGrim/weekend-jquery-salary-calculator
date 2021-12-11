@@ -12,28 +12,30 @@
     </head>
     <body>
     <h1> Nurse Salary Calculator</h1>
-    <form>
+ <!-- Create Employee Form-->  
+
+    <form id= "employeeForm">
 <!-- First Name Input-->
       <input
-          id= "FirstNameInput"
+          id= "firstNameInput"
           type= "text"
           placeholder = "First Name"
       />
 
 <!-- Last Name Input-->
       <input
-        id= "LastNameInput"
+        id= "lastNameInput"
         type= "text"
         placeholder= "Last Name"
       />
 <!-- ID Number Input-->
       <input
-        id= "IDNumberInput"
+        id= "iDNumberInput"
         type= "number"
         placeholder= "ID Number"
       />
 <!-- Title Input-->
-      <select id= "Title Input">
+      <select id= "titleInput">
         <option> DPN </option>
         <option> MSN </option>
         <option> RN </option>
@@ -47,12 +49,13 @@
       <input
       id= "AnnualSalaryInput"
       type= "number" 
-      step= "0.01"
+      step= "any"
       placeholder= "Annual Salary"
       />
     
 <!-- Submit Button -->    
       <input
+      id= "submitBtn"
       type= "submit"
       value= "Submit"
       />
