@@ -3,7 +3,7 @@ $(document).ready(readyNow);
 let employeeRegistrar = [];
 
 function readyNow(){
-    console.log('Thanks for working with our Hospital, Here is your salary');
+    console.log(`Thanks for working with our Hospital, how about we calculate your salary`);
     //handle new employee on submit
  $('#employeeForm').on('submit', onAddEmployee);
     // handle delete product on delete using the parent selection
