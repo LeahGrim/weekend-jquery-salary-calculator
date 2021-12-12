@@ -16,7 +16,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
     [x] stylesheet
     [x] jquery
     [x] javascript
-[] Wireframe
+[x] Wireframe
 [x] HTML mockup
 [] Add an employee info to DOM list 
     [x] form with employee first name, last name, ID number,   
@@ -25,10 +25,10 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
         [] submit button that collects the form info &
             stores info to calculate mothly costs 
         [] must append info to the DOM 
-        [] must clear input fields after hitting submit button
+        [x] must clear input fields after hitting submit button
 [] use stored employee info to calculate monthy salary 
-    []append monthly salary to DOM
+    [x]append monthly salary to DOM
     [] if total monthly costs are above $20,000, add red 
         background color to monthly costs on DOM 
-[] create a delete button that removes employee name from DOM
+[x] create a delete button that removes employee name from DOM
 

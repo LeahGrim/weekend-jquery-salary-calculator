@@ -1,4 +1,40 @@
 h1 {
     background: lightskyblue;
-    color: rebeccaPurple
+    color: rebeccaPurple;
+    text-align: center;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    padding: 25px 15px 25px;
+
+}
+#employeeForm{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    word-spacing: 10px;
+}
+.ColumnHeadings{
+    padding: 10px 10px 14px;
+    border: 5px solid black;
+    letter-spacing: 1.2px;
+}
+
+table {
+    width: 100%;
+}
+table, thead, tr {
+
+    padding: 5px;
+    border: 5px solid steelblue;
+
+}
+
+table, thead, tr, td {
+    border: 1px solid black;
+    background-color: rgba(159, 247, 250, 0.687);
+
+}
+
+table, tbody{
+    word-spacing: 10px;
 }
