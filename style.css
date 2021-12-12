@@ -2,7 +2,8 @@ h1 {
     background: lightskyblue;
     color: rebeccaPurple;
     text-align: center;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
+    word-spacing: 10px;
     text-transform: uppercase;
     padding: 25px 15px 25px;
 
@@ -15,8 +16,8 @@ h1 {
 }
 .ColumnHeadings{
     padding: 10px 10px 14px;
-    border: 5px solid black;
-    letter-spacing: 1.2px;
+    letter-spacing: 2px;
+    margin: 0 auto;
 }
 
 table {
@@ -36,5 +37,7 @@ table, thead, tr, td {
 }
 
 table, tbody{
-    word-spacing: 10px;
+    word-spacing: 5px;
+    font-size: larger;
+    margin: 0 auto;
 }
