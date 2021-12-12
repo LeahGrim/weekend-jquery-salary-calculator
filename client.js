@@ -1,9 +1,11 @@
 $(document).ready(readyNow);
  //global list of employee & info
 let employeeRegistrar = [];
+let monthlySalary= 0;
 
 function readyNow(){
-    console.log(`Thanks for working with our Hospital, how about we calculate your salary`);
+    console.log(`Thanks for working with our Hospital, 
+                how about we calculate your salary`);
     //handle new employee on submit
  $('#employeeForm').on('submit', onAddEmployee);
     // handle delete product on delete using the parent selection
@@ -30,10 +32,11 @@ function onAddEmployee(event) {
         lastName: lastName,
         idNumber: idNumber,
         title: title, 
-        annualSalary: annualSalary 
-    };
-    console.log('New Employee Calculation:', employeeObject)
-   // clear the inputs once submit is pushed
+        annualSalary: annualSalary
+        };
+    console.log('New Employee added:', employeeObject)
+   
+    // clear the inputs once submit is pushed
     firstName = $('#firstNameInput').val('');
     lastName = $('#lastNameInput').val('');
     idNumber= $('#iDNumberInput').val('');
@@ -45,13 +48,15 @@ function onAddEmployee(event) {
     //empty tbody for rendering employees to DOM
     $('#tableBody').empty();
    
+
+    monthlySalary += Math.round(employeeObject.annualSalary/12);
+
     // render the employee registrar 
    // loop through the array
    // render each employee to the DOM
    // as a <tr> so each product gets its own row
 
     for (let employeeObject of employeeRegistrar){
-        console.log('employee in loop is', employeeObject);
         $('#tableBody').append(`
         <tr>
         <td> ${employeeObject.firstName} </td>
@@ -59,6 +64,8 @@ function onAddEmployee(event) {
         <td> ${employeeObject.idNumber}  </td>
         <td> ${employeeObject.title}  </td>
         <td> $${employeeObject.annualSalary}  </td>
+        <td> $ ${monthlySalary} </td>
+        <
         <td>
           <button class = "deleteBtn">
             DELETE FOREVER
@@ -68,16 +75,30 @@ function onAddEmployee(event) {
         
         `);
     }
+
+
+
+
+
+//calculate montly salary based on annual salary
+
+    console.log(`monthly salary is ${monthlySalary}`);
+    $('#monthlySalary').empty();
+
+
+
+
 }// end onAddEmployee
 
-function onDeleteEmployee(){
-  $(this).parents('tr').remove();
-    for (employee of employeeRegistrar){
-        if (firstName === "" ){
-            
-        }
-    }
+
+
+
+function onDeleteEmployee(event){
+    $(this).parents('tr').remove();
+
+    console.log('new firstName after hitting delete button is', employeeRegistrar);
 
 
 } //end onDeleteEmployee
+
 
