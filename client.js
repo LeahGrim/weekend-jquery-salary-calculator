@@ -71,10 +71,13 @@ function onAddEmployee(event) {
 }// end onAddEmployee
 
 function onDeleteEmployee(){
-//  $(this).parents('tr').remove('');
-$(this).parents('tr').remove(employeeRegistrar, function(e) {
-     return e.firstName === "";
- });
+  $(this).parents('tr').remove();
+    for (employee of employeeRegistrar){
+        if (firstName === "" ){
+            
+        }
+    }
+
 
 } //end onDeleteEmployee
 
