@@ -61,7 +61,7 @@ function onAddEmployee(event) {
         <td> $${employeeObject.annualSalary}  </td>
         <td>
           <button class = "deleteBtn">
-            Delete
+            DELETE FOREVER
           </button>    
         </td>
       </tr>
