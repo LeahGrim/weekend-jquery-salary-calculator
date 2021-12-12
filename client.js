@@ -14,9 +14,9 @@ $(document).on('click', '.deleteBtn', onDeleteEmployee);
 
 function onAddEmployee(event) {
     // prevent form from page reloading 
-  event.preventDefault();
+    event.preventDefault();
     
-  console.log('employee added 💰');
+    console.log('employee added 💰');
 
    //grab data from DOM in form inputs to be used as objects of employee attributes
     let firstName = $('#firstNameInput').val();
@@ -71,7 +71,10 @@ function onAddEmployee(event) {
 }// end onAddEmployee
 
 function onDeleteEmployee(){
-    $(this).parents('tr').remove();
+//  $(this).parents('tr').remove('');
+$(this).parents('tr').remove(employeeRegistrar, function(e) {
+     return e.firstName === "";
+ });
 
 } //end onDeleteEmployee
 

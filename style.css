@@ -23,11 +23,13 @@ h1 {
     padding-bottom: 20px;
     text-align: center;
     word-spacing: 10px;
+    width: 100%;
 }
 .ColumnHeadings{
     padding: 10px 10px 14px;
     letter-spacing: 2px;
     margin: 0 auto;
+    width: 100%;
 }
 
 table {
