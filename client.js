@@ -27,11 +27,6 @@ function onAddEmployee(event) {
     let title = $('#titleInput').val();
     let annualSalary = Number($('#AnnualSalaryInput').val());
    
-   
-    // for(let i = 0; i < employeeRegistrar.length; i++) {
-       // monthlySalary += Math.round(employeeRegistrar[i].annualSalary / 12);
-        //console.log(monthlySalary);
-    //};
 
     //box up each employee info into an object array
    let employeeObject = {
@@ -55,12 +50,11 @@ function onAddEmployee(event) {
     //empty tbody for rendering employees to DOM
     $('#tableBody').empty();
    
- 
+ monthlySalary= employeeObject.annualSalary /12;
     // render the employee registrar 
    // loop through the array
    // render each employee to the DOM
    // as a <tr> so each product gets its own row
-
     for (let employeeObject of employeeRegistrar){
         $('#tableBody').append(`
         <tr>
@@ -81,19 +75,11 @@ function onAddEmployee(event) {
     }
 
 
-function monthlySalary(array){
-    for(let i = 0; i < employeeRegistrar.length; i++)
-    monthlySalary += Math.round(employeeRegistrar[i].annualSalary / 12)
-
+function monthlySal(){
+    for(let i = 0; i < employeeRegistrar.length; i++){
+    monthlySalary += Math.round(employeeRegistrar[i].annualSalary / 12);
+    }
 } // end of monthlySalary
-
-
-//calculate montly salary based on annual salary
-
- //   console.log(`monthly salary is ${monthlySalary}`);
-   // $('#monthlySalary').empty();
-
-
 
 
 }// end onAddEmployee
