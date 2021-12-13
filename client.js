@@ -40,12 +40,15 @@ function onAddEmployee(event) {
     console.log('New Employee added:', employeeObject)
    
     // clear the inputs once submit is pushed
+$('#inputs input').val('');
+
+/*
     firstName = $('#firstNameInput').val('');
     lastName = $('#lastNameInput').val('');
     idNumber= $('#iDNumberInput').val('');
     title = $('#titleInput').val('');
     annualSalary = $('#AnnualSalaryInput').val('');
-
+*/
    //push the new employee info added to the global array
     employeeRegistrar.push(employeeObject);
     //empty tbody for rendering employees to DOM
