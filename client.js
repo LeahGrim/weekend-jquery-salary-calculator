@@ -26,13 +26,20 @@ function onAddEmployee(event) {
     let idNumber= Number($('#iDNumberInput').val());
     let title = $('#titleInput').val();
     let annualSalary = Number($('#AnnualSalaryInput').val());
-   //box up each employee info into an object array
-    let employeeObject = {
+   
+   
+    // for(let i = 0; i < employeeRegistrar.length; i++) {
+       // monthlySalary += Math.round(employeeRegistrar[i].annualSalary / 12);
+        //console.log(monthlySalary);
+    //};
+
+    //box up each employee info into an object array
+   let employeeObject = {
         firstName: firstName, 
         lastName: lastName,
         idNumber: idNumber,
         title: title, 
-        annualSalary: annualSalary
+        annualSalary: annualSalary,
         };
     console.log('New Employee added:', employeeObject)
    
@@ -48,9 +55,7 @@ function onAddEmployee(event) {
     //empty tbody for rendering employees to DOM
     $('#tableBody').empty();
    
-
-    monthlySalary += Math.round(employeeObject.annualSalary/12);
-
+ 
     // render the employee registrar 
    // loop through the array
    // render each employee to the DOM
@@ -65,7 +70,6 @@ function onAddEmployee(event) {
         <td> ${employeeObject.title}  </td>
         <td> $${employeeObject.annualSalary}  </td>
         <td> $ ${monthlySalary} </td>
-        <
         <td>
           <button class = "deleteBtn">
             DELETE FOREVER
@@ -77,13 +81,17 @@ function onAddEmployee(event) {
     }
 
 
+function monthlySalary(array){
+    for(let i = 0; i < employeeRegistrar.length; i++)
+    monthlySalary += Math.round(employeeRegistrar[i].annualSalary / 12)
 
+} // end of monthlySalary
 
 
 //calculate montly salary based on annual salary
 
-    console.log(`monthly salary is ${monthlySalary}`);
-    $('#monthlySalary').empty();
+ //   console.log(`monthly salary is ${monthlySalary}`);
+   // $('#monthlySalary').empty();
 
 
 

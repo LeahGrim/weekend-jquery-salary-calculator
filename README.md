@@ -25,7 +25,7 @@ Additional README details can be found [here](https://github.com/PrimeAcademy/re
         [x] submit button that collects the form info & stores info 
         [x] must append info to the DOM 
         [x] must clear input fields after hitting submit button
-[] use stored employee info to calculate monthy salary 
+[x] use stored employee info to calculate monthy salary 
     [x]append monthly salary to DOM
     [] if total monthly costs are above
      $20,000, add red 
