@@ -11,6 +11,7 @@ function readyNow(){
     // handle delete product on delete using the parent selection
 $(document).on('click', '.deleteBtn', onDeleteEmployee);
 
+$('#totalCostSection').on('mouseenter', sumUpSalaries);
 }
 
 
@@ -74,17 +75,7 @@ function onAddEmployee(event) {
         `);
     }
 
-
-function monthlySal(){
-    for(let i = 0; i < employeeRegistrar.length; i++){
-    monthlySalary += Math.round(employeeRegistrar[i].annualSalary / 12);
-    }
-} // end of monthlySalary
-
-
 }// end onAddEmployee
-
-
 
 
 function onDeleteEmployee(event){
