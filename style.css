@@ -10,7 +10,7 @@ body{
 }
 h1 {
     background: lightskyblue;
-    color: rebeccaPurple;
+    color: black;
     text-align: center;
     letter-spacing: 5px;
     word-spacing: 10px;
@@ -52,4 +52,13 @@ table, tbody{
     word-spacing: 5px;
     font-size: larger;
     margin: 0 auto;
+}
+
+#monthlySal{
+    background-color: black;
+    color: white;
+}
+.totalCostSection{
+    background-color: black;
+    color: white;
 }

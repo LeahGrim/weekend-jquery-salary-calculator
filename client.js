@@ -1,5 +1,5 @@
 $(document).ready(readyNow);
- //global list of employee & info
+ //data aka "state" aka "model"
 let employeeRegistrar = [];
 let monthlySalary= 0;
 
@@ -10,8 +10,7 @@ function readyNow(){
  $('#employeeForm').on('submit', onAddEmployee);
     // handle delete product on delete using the parent selection
 $(document).on('click', '.deleteBtn', onDeleteEmployee);
-
-$('#totalCostSection').on('mouseenter', sumUpSalaries);
+//sumUpSalaries(employeeRegistrar);
 }
 
 
@@ -28,6 +27,9 @@ function onAddEmployee(event) {
     let title = $('#titleInput').val();
     let annualSalary = Number($('#AnnualSalaryInput').val());
    
+  //update my state with data from user
+  //render new employee
+
 
     //box up each employee info into an object array
    let employeeObject = {
@@ -36,25 +38,33 @@ function onAddEmployee(event) {
         idNumber: idNumber,
         title: title, 
         annualSalary: annualSalary,
+        monthlyCost: annualSalary / 12
         };
-    console.log('New Employee added:', employeeObject)
+    console.log('New Employee added:', employeeObject);
    
     // clear the inputs once submit is pushed in one simple line
     //made a div class for all my inputs and then called each input
     //and then cleared value
-$('#inputs input').val('');
+  $('#inputs input').val('');
 
    //push the new employee info added to the global array
     employeeRegistrar.push(employeeObject);
     //empty tbody for rendering employees to DOM
     $('#tableBody').empty();
-   
- monthlySalary= employeeObject.annualSalary /12;
-    // render the employee registrar 
+
+// create a monthly salary 
+//create new div for monthly salary 
+// VIEW LOGIC
+//code to update what the user actually sees
+// State ---> DOM
+
+
+
+// render the employee registrar 
    // loop through the array
    // render each employee to the DOM
    // as a <tr> so each product gets its own row
-    for (let employeeObject of employeeRegistrar){
+   for (let employeeObject of employeeRegistrar){
         $('#tableBody').append(`
         <tr>
         <td> ${employeeObject.firstName} </td>
@@ -62,26 +72,36 @@ $('#inputs input').val('');
         <td> ${employeeObject.idNumber}  </td>
         <td> ${employeeObject.title}  </td>
         <td> $${employeeObject.annualSalary}  </td>
-        <td> $ ${monthlySalary} </td>
         <td>
           <button class = "deleteBtn">
             DELETE FOREVER
           </button>    
         </td>
       </tr>
-        
         `);
     }
 
+//calculate monthly sum
+//empty div containing monthly sum everytime a new employee is added 
+
+ let sum = 0
+       $('.monthlySalContainer').empty();
+     for (let i=0; i<employeeRegistrar.length; i++){
+       sum += Number(employeeRegistrar[i].monthlyCost);
+      console.log(sum);
+      }
+
+     $('.monthlySalContainer').append(`${sum}`)
+     .css("color", "white");
+  
 }// end onAddEmployee
 
 
 function onDeleteEmployee(event){
     $(this).parents('tr').remove();
-
     console.log('new firstName after hitting delete button is', employeeRegistrar);
 
 
 } //end onDeleteEmployee
 
-
+ 
